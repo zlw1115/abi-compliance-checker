@@ -76,9 +76,9 @@ sub readline_ELF($)
         }
         $Info[6]=~s/\@.+//g; # remove version
     }
-    if(index($Info[2], "0x") == 0)
+    if(index($Info[1], "0x") == 0)
     { # size == 0x3d158
-        $Info[2] = hex($Info[2]);
+        $Info[1] = hex($Info[1]);
     }
     return @Info;
 }
